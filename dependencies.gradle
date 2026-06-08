@@ -3,6 +3,7 @@
 dependencies {
     compileOnly("com.github.GTNewHorizons:Railcraft:9.17.26")
     compileOnly("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
+    compileOnly("com.github.GTNewHorizons:CropsNH:2.0.68:dev")
 
     // Fixes Carts not spawning (Entity ID get set to a bad value without)
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:CoreTweaks:0.3.4.2-GTNH:dev")
@@ -14,4 +15,9 @@ dependencies {
 
     // For testing IC2 integration
     //runtimeOnlyNonPublishable("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
+
+    //For Testing CropsNH integration
+    //runtimeOnlyNonPublishable("com.github.GTNewHorizons:CropsNH:2.0.68:dev")
+    //runtimeOnlyNonPublishable("com.github.GTNewHorizons:GT5-Unofficial:5.09.52.590:dev")
+    //runtimeOnlyNonPublishable("com.github.GTNewHorizons:ForestryMC:4.11.26:dev")   
 }

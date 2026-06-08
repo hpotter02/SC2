@@ -192,7 +192,7 @@ public abstract class ModuleFarmer extends ModuleTool implements ISuppliesModule
         int fortune = enchanter != null ? enchanter.getFortuneLevel() : 0;
         List<ItemStack> stuff = workingCropModule.harvestCrop(x, y + 1, z, fortune);
 
-        for (ItemStack iStack : stuff) {
+        if (stuff != null) for (ItemStack iStack : stuff) {
 
             // Extra drop rates same as Crop managers of same tier
             if (getCart().rand.nextFloat() <= 0.05 * (getCart().getCurrentEngine().getEngineTier() + 1)) {

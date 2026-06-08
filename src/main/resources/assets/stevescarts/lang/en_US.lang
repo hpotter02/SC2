@@ -315,7 +315,7 @@ item.SC2:train_connector.name=Train Connector
 item.SC2:electric_engine_lv.name=Electric Engine LV
 item.SC2:electric_engine_mv.name=Electric Engine MV
 item.SC2:electric_engine_hv.name=Electric Engine HV
-item.SC2:crop_ic2.name=Crop: IC2
+item.SC2:crop_cropsnh.name=Crop: CropsNH
 
 
 # Components

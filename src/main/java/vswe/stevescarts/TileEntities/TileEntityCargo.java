@@ -135,7 +135,7 @@ public class TileEntityCargo extends TileEntityManager {
                         Localization.GUI.CARGO.AREA_CAKES,
                         SlotCake.class,
                         new ItemStack(Items.cake, 1)));
-        if (StevesCarts.isIC2Loaded) {
+        if (StevesCarts.isCropsNHLoaded) {
             itemSelections.add(
                     new CargoItemSelection(
                             Localization.GUI.CARGO.AREA_CROPSTICKS,
