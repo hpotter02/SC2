@@ -102,6 +102,7 @@ import vswe.stevescarts.Modules.Addons.ModuleSmelter;
 import vswe.stevescarts.Modules.Addons.ModuleSmelterAdv;
 import vswe.stevescarts.Modules.Addons.ModuleSnowCannon;
 import vswe.stevescarts.Modules.Addons.Plants.ModuleCropsNH;
+import vswe.stevescarts.Modules.Addons.Plants.ModuleIC2Crops;
 import vswe.stevescarts.Modules.Addons.Plants.ModuleModCrops;
 import vswe.stevescarts.Modules.Addons.Plants.ModuleModTrees;
 import vswe.stevescarts.Modules.Addons.Plants.ModuleNetherwart;
@@ -981,12 +982,17 @@ public class ModuleData {
                         { ComponentTypes.SIMPLE_PCB.getItemStack(), ComponentTypes.EMPTY_DISK.getItemStack(),
                                 ComponentTypes.SIMPLE_PCB.getItemStack() } });
 
-        if (StevesCarts.isCropsNHLoaded) {
-            new ModuleData(103, "Crop: CropsNH", ModuleCropsNH.class, 55).addRequirement(farmerGroup).addRecipe(
-                    new Object[][] { { Items.iron_hoe, null, Items.iron_hoe },
-                            { Items.redstone, Items.wheat_seeds, Items.redstone },
-                            { ComponentTypes.ADVANCED_PCB.getItemStack(), ComponentTypes.EMPTY_DISK.getItemStack(),
-                                    ComponentTypes.ADVANCED_PCB.getItemStack() } });
+        if (StevesCarts.isCropsNHLoaded || StevesCarts.isIC2Loaded) {
+            new ModuleData(
+                    103,
+                    StevesCarts.isCropsNHLoaded ? "Crop: CropsNH" : "Crop: IC2",
+                    StevesCarts.isCropsNHLoaded ? ModuleCropsNH.class : ModuleIC2Crops.class,
+                    55).addRequirement(farmerGroup).addRecipe(
+                            new Object[][] { { Items.iron_hoe, null, Items.iron_hoe },
+                                    { Items.redstone, Items.wheat_seeds, Items.redstone },
+                                    { ComponentTypes.ADVANCED_PCB.getItemStack(),
+                                            ComponentTypes.EMPTY_DISK.getItemStack(),
+                                            ComponentTypes.ADVANCED_PCB.getItemStack() } });
         }
 
         new ModuleData(89, "Planter Range Extender", ModulePlantSize.class, 20).addRequirement(woodcutterGroup)

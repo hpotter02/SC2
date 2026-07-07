@@ -19,7 +19,7 @@ import vswe.stevescarts.Interfaces.GuiMinecart;
 import vswe.stevescarts.Modules.Addons.ModuleAddon;
 import vswe.stevescarts.Modules.ICropModule;
 import vswe.stevescarts.Slots.SlotBase;
-import vswe.stevescarts.Slots.SlotCropStick;
+import vswe.stevescarts.Slots.SlotCropStickNH;
 
 public class ModuleCropsNH extends ModuleAddon implements ICropModule {
 
@@ -99,7 +99,7 @@ public class ModuleCropsNH extends ModuleAddon implements ICropModule {
 
     @Override
     protected SlotBase getSlot(int slotId, int x, int y) {
-        return new SlotCropStick(getCart(), slotId, 8 + x * 18, 16 + y * 18);
+        return new SlotCropStickNH(getCart(), slotId, 8 + x * 18, 16 + y * 18);
     }
 
     @Override
